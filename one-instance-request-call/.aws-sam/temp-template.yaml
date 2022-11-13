@@ -1,0 +1,11 @@
+Resources:
+  Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 300
+      MemorySize: 128
+      Handler: requestcall.requestHanldler.AwsRequestHandler
+      CodeUri: D:\one-instance-request-call
+      Runtime: java11
+      Architectures:
+        - x86_64

@@ -1,0 +1,15 @@
+Resources:
+  LambdaFunctionOverHttps:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: target\call-external-api.jar
+      Handler: https://c4m6afus4m.execute-api.ap-south-1.amazonaws.com/test
+      Runtime: java11
+      Events:
+        HttpPost:
+          Type: Api
+          Properties:
+            Path: '/api-gateway'
+            Method: post
+
+
